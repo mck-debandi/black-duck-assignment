@@ -1,4 +1,4 @@
-=== Back Duck Theme ===
+=== Black Duck Theme ===
 Contributors: McKenna DeBandi
 Requires at least: 7.0
 Tested up to: 7.0.1
