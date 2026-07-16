@@ -117,8 +117,8 @@
 				},
 				{
 					"fluid": {
-						"max": "3rem",
-						"min": "2.15rem"
+						"max": "72px",
+						"min": "60px"
 					},
 					"name": "Extra Extra Large",
 					"size": "2.15rem",
@@ -147,8 +147,8 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var:preset|color|base",
-			"text": "var:preset|color|contrast"
+			"background": "var:preset|color|white",
+			"text": "var:preset|color|black"
 		},
 		"spacing": {
 			"blockGap": "1.2rem",
@@ -158,11 +158,25 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var:preset|font-family|manrope",
-			"fontSize": "var:preset|font-size|large",
-			"fontWeight": "300",
+			"fontFamily": "var:preset|font-family|roboto",
+			"fontSize": "var:preset|font-size|medium",
+			"fontWeight": "400",
 			"letterSpacing": "-0.1px",
 			"lineHeight": "1.4"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			}
 		}
-	}
+	},
+	"customTemplates": [
+		{
+			"name": "page-ebook-redesign",
+			"postTypes": ["page"],
+			"title": "eBook Redesign"
+		}
+	]
 }
