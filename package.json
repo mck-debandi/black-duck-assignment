@@ -1,6 +1,6 @@
 {
 	"name": "blackducktheme",
-	"version": "1.0",
+	"version": "1.0.0",
 	"description": "Black Duck Assessment Theme",
 	"author": "McKenna DeBandi",
 	"license": "GPL-2.0-or-later",
@@ -16,15 +16,21 @@
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^6.34.0",
 		"@wordpress/scripts": "^33.0.0",
-		"cssnano": "^7.1.2",
-		"postcss": "^8.5.6",
-		"postcss-cli": "^11.0.1"
+		"cssnano": "^7.1.9",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.5.19",
+		"postcss-cli": "^11.0.1",
+		"sass": "^1.101.0"
 	},
 	"browserslist": [
 		"extends @wordpress/browserslist-config"
 	],
 	"scripts": {
-		"build": "postcss style.css --use cssnano -o style.min.css --no-map",
-		"watch": "postcss style.css --use cssnano -o style.min.css --no-map --watch"
+		"sass": "sass assets/scss/style.scss assets/css/style.css --style=expanded --no-source-map",
+		"minify": "postcss assets/css/style.css --use cssnano -o assets/css/style.min.css --no-map",
+		"build": "npm run sass && npm run minify",
+		"watch:sass": "sass --watch assets/scss/style.scss:assets/css/style.css --style=expanded",
+		"watch:minify": "postcss assets/css/style.css --use cssnano -o assets/css/style.min.css --no-map --watch",
+		"watch": "npm-run-all --parallel watch:sass watch:minify"
 	}
 }
