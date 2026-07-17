@@ -1,0 +1,84 @@
+@use "../abstracts/breakpoints" as media-queries;
+
+.card {
+    flex: 0 0 350px;
+    border-radius: 12px;
+    position: relative;
+    z-index: 0;
+    background: linear-gradient(180deg, var(--wp--preset--color--white) 8.65%, var(--wp--preset--color--light-gray) 100%);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 4px;
+        border-radius: inherit;
+        background: conic-gradient(from 50.19deg at 50% 49.54%, var(--wp--preset--color--gold) 0deg, var(--wp--preset--color--purple) 79.73deg, var(--wp--preset--color--gold) 180deg, var(--wp--preset--color--purple) 246.23deg, var(--wp--preset--color--gold) 360deg);
+        -webkit-mask: linear-gradient(var(--wp--preset--color--white)) content-box, linear-gradient(var(--wp--preset--color--white));
+        mask: linear-gradient(var(--wp--preset--color--white)) content-box, linear-gradient(var(--wp--preset--color--white));
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    .card-link {
+        height: 100%;
+        padding: var(--wp--preset--spacing--x-small);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: var(--wp--preset--spacing--x-small);
+
+        &:hover {
+
+            .card-title {
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 2px;
+            }
+        }
+
+        .card-content {
+
+            img{
+                max-width: 100%;
+                width: 310px;
+                height: 170px;
+                object-fit: cover;
+                border-radius: 12px;
+                margin-bottom: var(--wp--preset--spacing--regular);
+            }
+
+            .card-categories {
+                font-size: var(--wp--preset--font-size--small);
+                font-weight: 700;
+                line-height: 1.714;
+                letter-spacing: 1%;
+                color: var(--wp--preset--color--purple);
+                margin-bottom: var(--wp--preset--spacing--x-small);
+            }
+
+            .card-title {
+                margin-top: var(--wp--preset--spacing--x-small);
+                margin-bottom: var(--wp--preset--spacing--xx-small);
+                font-size: var(--wp--preset--font-size--x-large);
+                color: var(--wp--preset--color--purple);
+                line-height: 1.2;
+            }
+
+            .card-description {
+                font-size: var(--wp--preset--font-size--large);
+                color: var(--wp--preset--color--dark-gray);
+                margin-bottom: 0;
+            }
+        }
+
+        .call-to-action {
+            color: var(--wp--preset--color--purple);
+            display: flex;
+            gap: 8px;
+            align-self: flex-start;
+            margin: 0;
+        }
+    }
+}

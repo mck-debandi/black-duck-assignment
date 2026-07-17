@@ -11,59 +11,65 @@ $card = $args['card'] ?? [];
 if ( empty( $card ) ) {
 	return;
 }
-
 ?>
+
 
 <article class="card">
 
-	<?php if (!empty($card['image'])): ?>
+	<a class="card-link" href="<?php echo esc_url($card['link']); ?>" target="_blank">
 
-		<div class="asset-card__image">
-			<img
-				src="<?php echo esc_url($card['image']); ?>"
-				alt="<?php echo esc_attr($card['title']); ?>"
-			>
+		<div class="card-content">
+
+			<?php if (!empty($card['image'])): ?>
+
+				<div class="card-image">
+					<img
+						src="<?php echo esc_url($card['image']); ?>"
+						alt="<?php echo esc_attr($card['title']); ?>"
+					>
+				</div>
+
+			<?php endif; ?>
+
+			<?php if (!empty($card['categories'])): ?>
+
+				<span class="card-categories">
+
+					<?php echo implode(', ', $card['categories']); ?>
+
+				</span>
+
+			<?php endif; ?>
+
+			<?php if (!empty($card['category'])): ?>
+
+				<span class="asset-card__category">
+					<?php echo esc_html($card['category']); ?>
+				</span>
+
+			<?php endif; ?>
+
+
+			<h4 class="card-title">
+				<?php echo esc_html($card['title']); ?>
+			</h4>
+
+
+			<?php if (!empty($card['description'])): ?>
+
+				<p class="card-description">
+					<?php echo esc_html($card['description']); ?>
+				</p>
+
+			<?php endif; ?>
+
 		</div>
-
-	<?php endif; ?>
-
-
-	<div class="asset-card__content">
-
-		<?php if (!empty($card['category'])): ?>
-
-			<span class="asset-card__category">
-				<?php echo esc_html($card['category']); ?>
-			</span>
-
-		<?php endif; ?>
-
-
-		<h3 class="asset-card__title">
-			<?php echo esc_html($card['title']); ?>
-		</h3>
-
-
-		<?php if (!empty($card['description'])): ?>
-
-			<p class="asset-card__description">
-				<?php echo esc_html($card['description']); ?>
-			</p>
-
-		<?php endif; ?>
-
 
 		<?php if (!empty($card['link'])): ?>
 
-			<a 
-				class="asset-card__link"
-				href="<?php echo esc_url($card['link']); ?>"
-			>
-				Learn More
-			</a>
+			<p class="call-to-action button button-tertiary button-icon">Learn More</p>
 
 		<?php endif; ?>
 
-	</div>
-
+	</a>
 </article>

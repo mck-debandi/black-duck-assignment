@@ -14,6 +14,11 @@
 					"slug": "purple"
 				},
 				{
+					"color": "#5A2A82",
+					"name": "Dark Purple",
+					"slug": "dark-purple"
+				},
+				{
 					"color": "#FFC749",
 					"name": "Gold",
 					"slug": "gold "
@@ -22,50 +27,61 @@
 					"color": "#FFFFFF",
 					"name": "White",
 					"slug": "white"
+				},
+				{
+					"color": "#000000",
+					"name": "Black",
+					"slug": "black"
+				},
+				{
+					"color": "#F2F2F2",
+					"name": "Light Gray",
+					"slug": "light-gray"
+				},
+				{
+					"color": "#303030",
+					"name": "Dark Gray",
+					"slug": "dark-gray"
 				}
 			]
-		},
-		"layout": {
-			"contentSize": "645px",
-			"wideSize": "1340px"
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
-					"name": "Tiny",
+					"name": "XX-Small",
 					"size": "10px",
-					"slug": "20"
+					"slug": "xx-small"
 				},
 				{
 					"name": "X-Small",
 					"size": "20px",
-					"slug": "30"
+					"slug": "x-small"
 				},
 				{
 					"name": "Small",
 					"size": "30px",
-					"slug": "40"
+					"slug": "small"
 				},
 				{
 					"name": "Regular",
-					"size": "clamp(30px, 5vw, 50px)",
-					"slug": "50"
+					"size": "32px",
+					"slug": "regular"
 				},
 				{
 					"name": "Large",
 					"size": "clamp(30px, 7vw, 70px)",
-					"slug": "60"
+					"slug": "large"
 				},
 				{
 					"name": "X-Large",
 					"size": "clamp(50px, 7vw, 90px)",
-					"slug": "70"
+					"slug": "x-large"
 				},
 				{
 					"name": "XX-Large",
 					"size": "clamp(70px, 10vw, 140px)",
-					"slug": "80"
+					"slug": "xx-large"
 				}
 			],
 			"units": [
@@ -83,15 +99,18 @@
 			"fluid": true,
 			"fontSizes": [
 				{
-					"fluid": false,
+					"fluid": {
+						"max": "14px",
+						"min": "13px"
+					},
 					"name": "Small",
 					"size": "0.875rem",
 					"slug": "small"
 				},
 				{
 					"fluid": {
-						"max": "1.125rem",
-						"min": "1rem"
+						"max": "16px",
+						"min": "15px"
 					},
 					"name": "Medium",
 					"size": "1rem",
@@ -99,20 +118,20 @@
 				},
 				{
 					"fluid": {
-						"max": "1.375rem",
-						"min": "1.125rem"
+						"max": "18px",
+						"min": "16px"
 					},
 					"name": "Large",
-					"size": "1.38rem",
+					"size": "1.125rem",
 					"slug": "large"
 				},
 				{
 					"fluid": {
-						"max": "2rem",
-						"min": "1.75rem"
+						"max": "26px",
+						"min": "24px"
 					},
 					"name": "Extra Large",
-					"size": "1.75rem",
+					"size": "1.625rem",
 					"slug": "x-large"
 				},
 				{
@@ -121,7 +140,7 @@
 						"min": "60px"
 					},
 					"name": "Extra Extra Large",
-					"size": "2.15rem",
+					"size": "4.5rem",
 					"slug": "xx-large"
 				}
 			],
@@ -143,26 +162,36 @@
 				}
 			]
 		},
+		"shadow": {
+			"defaultPresets": true,
+			"presets": [
+				{
+					"name": "Natural",
+					"slug": "natural",
+					"shadow": "0 4px 34px 0 rgba(0, 0, 0, 0.25)"
+				}
+			]
+
+		},
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
 		"color": {
 			"background": "var:preset|color|white",
-			"text": "var:preset|color|black"
+			"text": "var:preset|color|dark-gray"
 		},
 		"spacing": {
-			"blockGap": "1.2rem",
+			"blockGap": "32px",
 			"padding": {
-				"left": "var:preset|spacing|50",
-				"right": "var:preset|spacing|50"
+				"left": "30px",
+				"right": "30px"
 			}
 		},
 		"typography": {
 			"fontFamily": "var:preset|font-family|roboto",
 			"fontSize": "var:preset|font-size|medium",
 			"fontWeight": "400",
-			"letterSpacing": "-0.1px",
-			"lineHeight": "1.4"
+			"lineHeight": "1.23"
 		},
 		"elements": {
 			"heading": {
