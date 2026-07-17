@@ -50,9 +50,9 @@ if ( empty( $card ) ) {
 			<?php endif; ?>
 
 
-			<h4 class="card-title">
+			<p class="card-title">
 				<?php echo esc_html($card['title']); ?>
-			</h4>
+			</p>
 
 
 			<?php if (!empty($card['description'])): ?>

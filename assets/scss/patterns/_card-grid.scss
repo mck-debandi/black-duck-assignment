@@ -1,6 +1,8 @@
 @use "../abstracts/breakpoints" as media-queries;
 
 .card-grid-wrapper {
+    margin-top: var(--wp--preset--spacing--xx-large);
+    margin-bottom: var(--wp--preset--spacing--xx-large);
 
     .card-grid {
         display: flex;

@@ -19,6 +19,11 @@
 					"slug": "dark-purple"
 				},
 				{
+					"color": "#1d0631",
+					"name": "Extra Dark Purple",
+					"slug": "extra-dark-purple"
+				},
+				{
 					"color": "#FFC749",
 					"name": "Gold",
 					"slug": "gold "
@@ -75,12 +80,12 @@
 				},
 				{
 					"name": "X-Large",
-					"size": "clamp(50px, 7vw, 90px)",
+					"size": "60px",
 					"slug": "x-large"
 				},
 				{
 					"name": "XX-Large",
-					"size": "clamp(70px, 10vw, 140px)",
+					"size": "clamp(70px, 10vw, 100px)",
 					"slug": "xx-large"
 				}
 			],
@@ -99,48 +104,33 @@
 			"fluid": true,
 			"fontSizes": [
 				{
-					"fluid": {
-						"max": "14px",
-						"min": "13px"
-					},
+					"fluid": false,
 					"name": "Small",
 					"size": "0.875rem",
 					"slug": "small"
 				},
 				{
-					"fluid": {
-						"max": "16px",
-						"min": "15px"
-					},
+					"fluid": false,
 					"name": "Medium",
 					"size": "1rem",
 					"slug": "medium"
 				},
 				{
-					"fluid": {
-						"max": "18px",
-						"min": "16px"
-					},
+					"fluid": false,
 					"name": "Large",
 					"size": "1.125rem",
 					"slug": "large"
 				},
 				{
-					"fluid": {
-						"max": "26px",
-						"min": "24px"
-					},
+					"fluid": false,
 					"name": "Extra Large",
 					"size": "1.625rem",
 					"slug": "x-large"
 				},
 				{
-					"fluid": {
-						"max": "72px",
-						"min": "60px"
-					},
+					"fluid": false,
 					"name": "Extra Extra Large",
-					"size": "4.5rem",
+					"size": "3.75rem",
 					"slug": "xx-large"
 				}
 			],

@@ -40,13 +40,17 @@
 
         .card-content {
 
-            img{
-                max-width: 100%;
+            .card-image {
                 width: 310px;
                 height: 170px;
-                object-fit: cover;
-                border-radius: 12px;
                 margin-bottom: var(--wp--preset--spacing--regular);
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 12px;
+                }
             }
 
             .card-categories {
@@ -64,11 +68,13 @@
                 font-size: var(--wp--preset--font-size--x-large);
                 color: var(--wp--preset--color--purple);
                 line-height: 1.2;
+                transition: all 0.3s ease-in-out;
             }
 
             .card-description {
                 font-size: var(--wp--preset--font-size--large);
                 color: var(--wp--preset--color--dark-gray);
+                margin-top: 0;
                 margin-bottom: 0;
             }
         }
