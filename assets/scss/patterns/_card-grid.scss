@@ -1,0 +1,12 @@
+@use "../abstracts/breakpoints" as media-queries;
+
+.card-grid-wrapper {
+
+    .card-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--wp--preset--spacing--regular);
+    }
+}
+ 

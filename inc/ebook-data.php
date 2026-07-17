@@ -10,11 +10,25 @@ function blackducktheme_get_assets() {
             'categories' => [
                 'eBook',
                 'Guide'
-            ],
-            'tags' => [
-                'Black Duck SCA',
-                'M&A Due Diligence',
-                'SCA'
+            ]
+        ],
+        [
+            'title' => 'Build and Maintain Actionable SBOMs',
+            'description' => 'Software is constantly changing. ... Patches. ... Without a complete, dynamic view of what\'s in your applications, you can\'t know what risks you\'re exposed to. ... A Software Bill of Materials (SBO...',
+            'link' => 'https://www.blackduck.com/resources/ebooks/actionable-software-bill-of-materials.html',
+            'image' => get_template_directory_uri() . '/assets/images/duck-yellow-eyes.jpg',
+            'categories' => [
+                'eBook'
+            ]
+        ],
+        [
+            'title' => 'EU CRA Vulnerability Reporting Checklist',
+            'description' => 'The EU Cyber Resilience Act (CRA) is changing the game for software and hardware products sold in the EU. ... Starting September 11, 2026, manufacturers, importers, and distributors must report act...',
+            'link' => 'https://www.blackduck.com/resources/ebooks/actionable-software-bill-of-materials.html',
+            'image' => get_template_directory_uri() . '/assets/images/yellow-rubber-duckies.jpg',
+            'categories' => [
+                'eBook',
+                'Guide'
             ]
         ],
         [
@@ -25,25 +39,6 @@ function blackducktheme_get_assets() {
             'categories' => [
                 'eBook',
                 'Guide'
-            ],
-            'tags' => [
-                'Polaris',
-                'AI & Machine Learning',
-                'AppSec Risk Management'
-            ]
-        ],
-        [
-            'title' => 'Build and Maintain Actionable SBOMs',
-            'description' => 'Software is constantly changing. ... Patches. ... Without a complete, dynamic view of what\'s in your applications, you can\'t know what risks you\'re exposed to. ... A Software Bill of Materials (SBO...',
-            'link' => 'https://www.blackduck.com/resources/ebooks/actionable-software-bill-of-materials.html',
-            'image' => get_template_directory_uri() . '/assets/images/duck-yellow-eyes.jpg',
-            'categories' => [
-                'eBook'
-            ],
-            'tags' => [
-                'Black Duck SCA',
-                'SCA',
-                'Software Supply Chain Security'
             ]
         ]
 	];

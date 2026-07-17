@@ -9,12 +9,18 @@
  */
 ?>
 
-<!-- wp:group {"className":"card-grid-target"} -->
-<div class="wp-block-group card-grid-target">
-
-	<!-- wp:paragraph -->
-	<p>Cards will display here.</p>
-	<!-- /wp:paragraph -->
-
+<!-- wp:group {"className":"card-grid-wrapper","layout":{"type":"constrained"}} -->
+<div class="wp-block-group card-grid-wrapper">
+	
+	<!-- wp:group {"className":"card-grid-target"} -->
+	<div class="wp-block-group card-grid-target">
+		
+		<!-- wp:paragraph -->
+		<p>-- Cards will display here. --</p>
+		<!-- /wp:paragraph -->
+		
+	</div>
+	<!-- /wp:group -->
+	
 </div>
 <!-- /wp:group -->
