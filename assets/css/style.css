@@ -126,6 +126,10 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   gap: var(--wp--preset--spacing--small);
+  border-radius: 12px;
+}
+.card .card-link:focus {
+  outline-offset: 4px;
 }
 @media (min-width: 730px) {
   .card .card-link {

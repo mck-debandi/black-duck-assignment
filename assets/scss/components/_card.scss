@@ -35,6 +35,11 @@
         flex-direction: column;
         justify-content: space-between;
         gap: var(--wp--preset--spacing--small);
+        border-radius: 12px;
+
+        &:focus {
+            outline-offset: 4px;
+        }
 
         @include media.breakpoint("md") {
             padding: var(--wp--preset--spacing--small);

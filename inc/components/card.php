@@ -16,17 +16,14 @@ if ( empty( $card ) ) {
 
 <article class="card">
 
-	<a class="card-link" href="<?php echo esc_url($card['link']); ?>" target="_blank">
+	<a class="card-link" href="<?php echo esc_url($card['link']); ?>" target="_blank" aria-label="Learn more about <?php echo esc_attr($card['title']); ?>">
 
 		<div class="card-content">
 
 			<?php if (!empty($card['image'])): ?>
 
 				<div class="card-image">
-					<img
-						src="<?php echo esc_url($card['image']); ?>"
-						alt="<?php echo esc_attr($card['title']); ?>"
-					>
+					<img src="<?php echo esc_url($card['image']); ?>" alt="<?php echo esc_attr($card['title']); ?>">
 				</div>
 
 			<?php endif; ?>
