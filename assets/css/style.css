@@ -23,7 +23,12 @@ a {
 }
 
 h1 {
-  font-size: var(--wp--preset--font-size--xx-large);
+  font-size: 40px;
+}
+@media (min-width: 730px) {
+  h1 {
+    font-size: var(--wp--preset--font-size--xx-large);
+  }
 }
 
 *,
@@ -34,17 +39,17 @@ h1 {
 
 .container {
   margin: 0 auto;
+  padding-right: var(--wp--style--root--padding-right);
+  padding-left: var(--wp--style--root--padding-left);
 }
 @media (min-width: 992px) {
   .container {
     max-width: 970px;
-    padding-right: var(--wp--style--root--padding-right);
-    padding-left: var(--wp--style--root--padding-left);
   }
 }
 @media (min-width: 1340px) {
   .container {
-    max-width: 1400px;
+    max-width: 1170px;
   }
 }
 
@@ -71,8 +76,13 @@ h1 {
 }
 
 .card-grid-wrapper {
-  margin-top: var(--wp--preset--spacing--xx-large);
+  margin-top: var(--wp--preset--spacing--x-large);
   margin-bottom: var(--wp--preset--spacing--xx-large);
+}
+@media (min-width: 730px) {
+  .card-grid-wrapper {
+    margin-top: var(--wp--preset--spacing--xx-large);
+  }
 }
 .card-grid-wrapper .card-grid {
   display: flex;
@@ -82,11 +92,19 @@ h1 {
 }
 
 .card {
-  flex: 0 0 350px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 335px;
   border-radius: 12px;
   position: relative;
   z-index: 0;
   background: linear-gradient(180deg, var(--wp--preset--color--white) 8.65%, var(--wp--preset--color--light-gray) 100%);
+}
+@media (min-width: 730px) {
+  .card {
+    width: calc((100% - 32px) / 2);
+    max-width: 350px;
+  }
 }
 .card::before {
   content: "";
@@ -107,7 +125,12 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--wp--preset--spacing--x-small);
+  gap: var(--wp--preset--spacing--small);
+}
+@media (min-width: 730px) {
+  .card .card-link {
+    padding: var(--wp--preset--spacing--small);
+  }
 }
 .card .card-link:hover .card-title {
   text-decoration: underline;
@@ -115,9 +138,18 @@ h1 {
   text-underline-offset: 2px;
 }
 .card .card-link .card-content .card-image {
-  width: 310px;
-  height: 170px;
+  width: 303px;
+  height: 162px;
   margin-bottom: var(--wp--preset--spacing--regular);
+}
+@media (min-width: 730px) {
+  .card .card-link .card-content .card-image {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    max-width: 310px;
+    max-height: 170px;
+  }
 }
 .card .card-link .card-content .card-image img {
   width: 100%;
@@ -131,21 +163,33 @@ h1 {
   line-height: 1.714;
   letter-spacing: 1%;
   color: var(--wp--preset--color--purple);
-  margin-bottom: var(--wp--preset--spacing--x-small);
+  margin-bottom: var(--wp--preset--spacing--small);
 }
 .card .card-link .card-content .card-title {
-  margin-top: var(--wp--preset--spacing--x-small);
+  margin-top: 8px;
   margin-bottom: var(--wp--preset--spacing--xx-small);
-  font-size: var(--wp--preset--font-size--x-large);
+  font-size: 22px;
   color: var(--wp--preset--color--purple);
-  line-height: 1.2;
+  line-height: 1.182;
   transition: all 0.3s ease-in-out;
 }
+@media (min-width: 730px) {
+  .card .card-link .card-content .card-title {
+    font-size: var(--wp--preset--font-size--x-large);
+    margin-top: var(--wp--preset--spacing--small);
+    line-height: 1.2;
+  }
+}
 .card .card-link .card-content .card-description {
-  font-size: var(--wp--preset--font-size--large);
+  font-size: var(--wp--preset--font-size--medium);
   color: var(--wp--preset--color--dark-gray);
   margin-top: 0;
   margin-bottom: 0;
+}
+@media (min-width: 730px) {
+  .card .card-link .card-content .card-description {
+    font-size: var(--wp--preset--font-size--large);
+  }
 }
 .card .card-link .call-to-action {
   color: var(--wp--preset--color--purple);
@@ -153,24 +197,40 @@ h1 {
   gap: 8px;
   align-self: flex-start;
   margin: 0;
+  font-size: 15px;
+}
+@media (min-width: 730px) {
+  .card .card-link .call-to-action {
+    font-size: var(--wp--preset--font-size--medium);
+  }
 }
 
 .page-template-page-ebook-redesign .banner {
   background-image: linear-gradient(180deg, rgba(29, 6, 49, 0) 0, var(--wp--preset--color--extra-dark-purple) 75.67%), url("../images/banner-background.png");
-  padding: var(--wp--preset--spacing--x-large) 0;
+  padding: var(--wp--preset--spacing--large) 0;
+}
+@media (min-width: 730px) {
+  .page-template-page-ebook-redesign .banner {
+    padding: var(--wp--preset--spacing--x-large) 0;
+  }
 }
 .page-template-page-ebook-redesign .banner h1 {
   color: var(--wp--preset--color--white);
   margin-bottom: 24px;
 }
 .page-template-page-ebook-redesign .banner p {
-  font-size: var(--wp--preset--font-size--x-large);
+  font-size: 22px;
   color: var(--wp--preset--color--white);
   margin-top: 15px;
   margin-bottom: 24px;
   margin-left: 0 !important;
   max-width: 1100px;
   text-align: left;
+}
+@media (min-width: 730px) {
+  .page-template-page-ebook-redesign .banner p {
+    font-size: var(--wp--preset--font-size--x-large);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

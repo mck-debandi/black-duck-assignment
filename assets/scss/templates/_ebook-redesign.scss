@@ -1,8 +1,14 @@
+@use "../abstracts/breakpoints" as media;
+
 .page-template-page-ebook-redesign {
 
     .banner {
         background-image: linear-gradient(180deg, rgba(29, 6, 49, 0) 0, var(--wp--preset--color--extra-dark-purple) 75.67%), url("../images/banner-background.png");
-        padding: var(--wp--preset--spacing--x-large) 0;
+        padding: var(--wp--preset--spacing--large) 0;
+
+        @include media.breakpoint("md") {
+            padding: var(--wp--preset--spacing--x-large) 0;
+        }
 
         h1 {
             color: var(--wp--preset--color--white);
@@ -10,13 +16,17 @@
         }
 
         p {
-            font-size: var(--wp--preset--font-size--x-large);
+            font-size: 22px;
             color: var(--wp--preset--color--white);
             margin-top: 15px;
             margin-bottom: 24px;
             margin-left: 0 !important;
             max-width: 1100px;
             text-align: left;
+
+            @include media.breakpoint("md") {
+                font-size: var(--wp--preset--font-size--x-large);
+            }
         }
     }
 }

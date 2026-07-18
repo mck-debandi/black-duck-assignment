@@ -60,12 +60,12 @@
 				},
 				{
 					"name": "X-Small",
-					"size": "20px",
+					"size": "16px",
 					"slug": "x-small"
 				},
 				{
 					"name": "Small",
-					"size": "30px",
+					"size": "20px",
 					"slug": "small"
 				},
 				{
@@ -75,7 +75,7 @@
 				},
 				{
 					"name": "Large",
-					"size": "clamp(30px, 7vw, 70px)",
+					"size": "45px",
 					"slug": "large"
 				},
 				{
@@ -85,7 +85,7 @@
 				},
 				{
 					"name": "XX-Large",
-					"size": "clamp(70px, 10vw, 100px)",
+					"size": "100px",
 					"slug": "xx-large"
 				}
 			],

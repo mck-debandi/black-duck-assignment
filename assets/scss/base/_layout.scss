@@ -1,4 +1,4 @@
-@use "../abstracts/breakpoints" as media-queries;
+@use "../abstracts/breakpoints" as media;
 
 *,
 *::before,
@@ -8,14 +8,14 @@
 
 .container {
     margin: 0 auto;
+    padding-right: var(--wp--style--root--padding-right);
+    padding-left: var(--wp--style--root--padding-left);
 
-     @include media-queries.breakpoint("lg") {
+     @include media.breakpoint("lg") {
         max-width: 970px;
-        padding-right: var(--wp--style--root--padding-right);
-        padding-left: var(--wp--style--root--padding-left);
     }
     
-    @include media-queries.breakpoint("xl") {
-        max-width: 1400px;
+    @include media.breakpoint("xl") {
+        max-width: 1170px;
     }
 }
