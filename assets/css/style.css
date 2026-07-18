@@ -161,7 +161,7 @@ h1 {
   object-fit: cover;
   border-radius: 12px;
 }
-.card .card-link .card-content .card-categories {
+.card .card-link .card-content .eyebrow {
   font-size: var(--wp--preset--font-size--small);
   font-weight: 700;
   line-height: 1.714;
@@ -169,7 +169,7 @@ h1 {
   color: var(--wp--preset--color--purple);
   margin-bottom: var(--wp--preset--spacing--small);
 }
-.card .card-link .card-content .card-title {
+.card .card-link .card-content .headline {
   margin-top: 8px;
   margin-bottom: var(--wp--preset--spacing--xx-small);
   font-size: 22px;
@@ -178,20 +178,20 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 @media (min-width: 730px) {
-  .card .card-link .card-content .card-title {
+  .card .card-link .card-content .headline {
     font-size: var(--wp--preset--font-size--x-large);
     margin-top: var(--wp--preset--spacing--small);
     line-height: 1.2;
   }
 }
-.card .card-link .card-content .card-description {
+.card .card-link .card-content .description {
   font-size: var(--wp--preset--font-size--medium);
   color: var(--wp--preset--color--dark-gray);
   margin-top: 0;
   margin-bottom: 0;
 }
 @media (min-width: 730px) {
-  .card .card-link .card-content .card-description {
+  .card .card-link .card-content .description {
     font-size: var(--wp--preset--font-size--large);
   }
 }

@@ -30,7 +30,7 @@ if ( empty( $card ) ) {
 
 			<?php if (!empty($card['categories'])): ?>
 
-				<span class="card-categories">
+				<span class="eyebrow">
 
 					<?php echo implode(', ', $card['categories']); ?>
 
@@ -38,23 +38,14 @@ if ( empty( $card ) ) {
 
 			<?php endif; ?>
 
-			<?php if (!empty($card['category'])): ?>
-
-				<span class="asset-card__category">
-					<?php echo esc_html($card['category']); ?>
-				</span>
-
-			<?php endif; ?>
-
-
-			<p class="card-title">
+			<p class="headline">
 				<?php echo esc_html($card['title']); ?>
 			</p>
 
 
 			<?php if (!empty($card['description'])): ?>
 
-				<p class="card-description">
+				<p class="description">
 					<?php echo esc_html($card['description']); ?>
 				</p>
 
