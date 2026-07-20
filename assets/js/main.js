@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const searchInput  = document.getElementById('resource-search');
 	const searchButton = document.getElementById('search-button');
-	const resetButton  = document.getElementById('reset-filters');
+	const resetButton  = document.getElementById('reset-filters-button');
 	const filters      = document.querySelectorAll('.resource-filter');
 	const cards        = document.querySelectorAll('.card');
 	const totalCards   = cards.length;

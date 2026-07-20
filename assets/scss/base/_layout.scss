@@ -1,3 +1,4 @@
+// Breakpoints for media queries
 @use "../abstracts/breakpoints" as media;
 
 *,
@@ -11,7 +12,7 @@
     padding-right: var(--wp--style--root--padding-right);
     padding-left: var(--wp--style--root--padding-left);
 
-     @include media.breakpoint("lg") {
+    @include media.breakpoint("lg") {
         max-width: 970px;
     }
     

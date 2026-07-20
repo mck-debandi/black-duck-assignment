@@ -1,3 +1,4 @@
+// Breakpoints for media queries
 @use "../abstracts/breakpoints" as media;
 
 .resource-filters {
@@ -5,19 +6,28 @@
     margin-top: 0;
     margin-top: var(--wp--preset--spacing--xx-small);
 
-    #reset-filters {
+    #reset-filters-button {
         position: absolute;
-        top: -60px;
+        top: -50px;
         font-size: var(--wp--preset--font-size--small);
         display: none;
 
         &.active {
             display: block;
         }
+
+        @include media.breakpoint("md") {
+            top: -60px;
+        }
     }
 
     .search-container{
         position: relative;
+        margin-top: var(--wp--preset--spacing--small);
+
+        @include media.breakpoint("md") {
+            margin-top: 0;
+        }
 
         #resource-search {
             display: block;

@@ -1,3 +1,4 @@
+// Breakpoints for media queries
 @use "../abstracts/breakpoints" as media;
 
 .page-template-page-ebook-redesign {
@@ -45,5 +46,4 @@
             max-width: 1600px;
         }
     }
-
 }

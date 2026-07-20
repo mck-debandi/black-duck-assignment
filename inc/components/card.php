@@ -20,17 +20,15 @@ $title       = !empty($card['title']) ? $card['title'] : '';
 $description = !empty($card['description']) ? $card['description'] : '';
 $link        = !empty($card['link']) ? $card['link'] : '';
 $tags  		 = !empty($card['tags']) ? $card['tags'] : [];
-?>
 
+?>
 
 <article class="card" data-categories="<?php echo esc_attr( strtolower( implode( '; ', $categories ) ) ); ?>" data-tags="<?php echo esc_attr( strtolower( implode( '; ', $tags ) ) ); ?>">
 
 	<a class="card-link" href="<?php echo esc_url($card['link']); ?>" target="_blank" aria-label="Learn more about <?php echo esc_attr($card['title']); ?>">
 
 		<div class="card-content">
-			<div class="card-image">
-				<img src="<?php echo esc_url($image) ?>" alt="<?php echo esc_attr($card['title']); ?>">
-			</div>
+			<img src="<?php echo esc_url($image) ?>" alt="<?php echo esc_attr($card['title']); ?>">
 
 			<span class="eyebrow">
 				<?php echo implode(', ', $categories); ?>
@@ -46,5 +44,6 @@ $tags  		 = !empty($card['tags']) ? $card['tags'] : [];
 		</div>
 
 		<p class="call-to-action button button-tertiary button-icon">Learn More</p>
+
 	</a>
 </article>

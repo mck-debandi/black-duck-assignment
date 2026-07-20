@@ -1,7 +1,14 @@
-<?php 
+<?php
+
+/** 
+ * Load eBook data file once
+ */
+require_once get_template_directory() . '/assets/data/ebook-data.php';
 
 /** 
  * Enqueues the minified compiled stylesheet and javascript
+ * 
+ * @return void
  */
 function blackducktheme_enqueue_assets() {
 
@@ -24,7 +31,9 @@ add_action( 'wp_enqueue_scripts', 'blackducktheme_enqueue_assets' );
 
 
 /** 
- * Add custom pattern category for theme
+ * Adds custom pattern category for theme
+ * 
+ * @return void
  */
 function blackducktheme_custom_pattern_categories() {
 	
@@ -36,12 +45,6 @@ function blackducktheme_custom_pattern_categories() {
     );
 }
 add_action( 'init', 'blackducktheme_custom_pattern_categories' );
-
-
-/** 
- * Load eBook data file once
- */
-require_once get_template_directory() . '/assets/data/ebook-data.php';
 
 
 /** 

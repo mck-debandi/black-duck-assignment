@@ -147,23 +147,29 @@
 					"fontFace": [
 						{
 							"src": [
-								"file:./assets/fonts/roboto/Roboto.woff2"
+								"file:./assets/fonts/roboto/Roboto-Regular.woff2"
 							],
-							"fontWeight": "400 600 700",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontFamily": "Roboto"
+						},
+						{
+							"src": [
+								"file:./assets/fonts/roboto/Roboto-Semibold.woff2"
+							],
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"fontFamily": "Roboto"
+						},
+						{
+							"src": [
+								"file:./assets/fonts/roboto/Roboto-Bold.woff2"
+							],
+							"fontWeight": "700",
 							"fontStyle": "normal",
 							"fontFamily": "Roboto"
 						}
 					]
-				}
-			]
-		},
-		"shadow": {
-			"defaultPresets": true,
-			"presets": [
-				{
-					"name": "Natural",
-					"slug": "natural",
-					"shadow": "0 4px 34px 0 rgba(0, 0, 0, 0.25)"
 				}
 			]
 		},

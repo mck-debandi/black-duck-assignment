@@ -6,7 +6,6 @@ $breakpoints: (
 	"xl": 1340px,
 );
 
-
 // Media query mixin
 @mixin breakpoint($size) {
 
@@ -19,7 +18,6 @@ $breakpoints: (
 	} @else {
 
 		@error "Breakpoint '#{$size}' does not exist. Available breakpoints: #{map-keys($breakpoints)}.";
-
+		
 	}
-
 }

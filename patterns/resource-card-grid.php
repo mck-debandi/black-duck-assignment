@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: Card Grid
- * Slug: black-duck-theme/card-grid
+ * Title: Resource Card Grid
+ * Slug: black-duck-theme/resource-card-grid
  * Categories: black-duck-custom
- * Description: Displays a grid of cards containing asset data from a php file.
+ * Description: Displays a grid of cards containing resource data from a php file.
  * Keywords: card, grid, resources
  * Viewport Width: 992
  */
@@ -20,13 +20,15 @@
 			
 			<!-- wp:html -->
 			<div class="resource-filters">
-				<button class="button button-secondary" type="button" id="reset-filters">Reset All Filters</button>
+				<button id="reset-filters-button" class="button button-secondary" type="button">Reset Filters</button>
 
+				<!-- Search bar -->
 				<div class="search-container">
 					<input type="search" id="resource-search" placeholder="Search">
 					<button id="search-button" class="button-unstyled" type="button" aria-label="Search"></button>
 				</div>
 
+				<!-- Filter for resource categories -->
 				<p>Type</p>
 				<div class="categories-filter">
 					<label>
@@ -39,6 +41,7 @@
 					</label>
 				</div>
 				
+				<!-- Filter for resource tags -->
 				<p>Topics</p>
 				<div class="tags-filter">
 					<label>
@@ -79,7 +82,6 @@
 					</label>
 				</div>
 			</div>
-
 			<!-- /wp:html -->
 
 		</div>
@@ -93,7 +95,6 @@
 
 				<!-- wp:html -->
 				<p id="resource-count"></p>
-
 				<p id="no-results" hidden>No results found.</p>
 				<!-- /wp:html -->
 				
