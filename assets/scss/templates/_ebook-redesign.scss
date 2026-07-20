@@ -4,10 +4,10 @@
 
     .banner {
         background-image: linear-gradient(180deg, rgba(29, 6, 49, 0) 0, var(--wp--preset--color--extra-dark-purple) 75.67%), url("../images/banner-background.png");
-        padding: var(--wp--preset--spacing--large) 0;
+        padding: var(--wp--preset--spacing--regular) 0;
 
         @include media.breakpoint("md") {
-            padding: var(--wp--preset--spacing--x-large) 0;
+            padding: var(--wp--preset--spacing--large) 0;
         }
 
         h1 {
@@ -29,4 +29,21 @@
             }
         }
     }
+
+    .main {
+        margin-top: var(--wp--preset--spacing--x-large);
+        margin-bottom: var(--wp--preset--spacing--xx-large);
+
+        @include media.breakpoint("md") {
+            margin-top: var(--wp--preset--spacing--xx-large);
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include media.breakpoint("xl") {
+            max-width: 1600px;
+        }
+    }
+
 }

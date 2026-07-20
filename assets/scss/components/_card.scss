@@ -8,10 +8,15 @@
     position: relative;
     z-index: 0;
     background: linear-gradient(180deg, var(--wp--preset--color--white) 8.65%, var(--wp--preset--color--light-gray) 100%);
+    transition: 0.2s ease-in-out;
 
     @include media.breakpoint("md") {
         width: calc((100% - 32px) / 2);
         max-width: 350px;
+    }
+
+    &:hover {
+        box-shadow: var(--wp--preset--shadow--natural);
     }
 
     &::before {
@@ -47,7 +52,7 @@
 
         &:hover {
 
-            .card-title {
+            .headline {
                 text-decoration: underline;
                 text-decoration-thickness: 2px;
                 text-underline-offset: 2px;
@@ -57,23 +62,21 @@
         .card-content {
 
             .card-image {
-                width: 303px;
-                height: 162px;
-                margin-bottom: var(--wp--preset--spacing--regular);
-
-                @include media.breakpoint("md") {
-                    aspect-ratio: 16/9;
-                    width: 100%;
-                    height: 100%;
-                    max-width: 310px;
-                    max-height: 170px;
-                }
-
-                img{
-                    width: 100%;
-                    height: 100%;
+                
+                img {
+                    width: 303px;
+                    height: 162px;
+                    margin-bottom: var(--wp--preset--spacing--small);
                     object-fit: cover;
                     border-radius: 12px;
+
+                    @include media.breakpoint("md") {
+                        aspect-ratio: 16/9;
+                        width: 100%;
+                        height: 100%;
+                        max-width: 310px;
+                        max-height: 170px;
+                    }
                 }
             }
 
@@ -94,7 +97,7 @@
                 line-height: 1.182;
                 transition: all 0.3s ease-in-out;
 
-                @include media.breakpoint("md") {
+                @include media.breakpoint("lg") {
                     font-size: var(--wp--preset--font-size--x-large);
                     margin-top: var(--wp--preset--spacing--small);
                     line-height: 1.2;
@@ -107,7 +110,7 @@
                 margin-top: 0;
                 margin-bottom: 0;
 
-                @include media.breakpoint("md") {
+                @include media.breakpoint("lg") {
                     font-size: var(--wp--preset--font-size--large);
                 }
             }
@@ -121,7 +124,7 @@
             margin: 0;
             font-size: 15px;
 
-            @include media.breakpoint("md") {
+            @include media.breakpoint("lg") {
                 font-size: var(--wp--preset--font-size--medium);
             }
         }

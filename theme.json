@@ -44,6 +44,11 @@
 					"slug": "light-gray"
 				},
 				{
+					"color": "#e5e8e8",
+					"name": "Gray",
+					"slug": "gray"
+				},
+				{
 					"color": "#303030",
 					"name": "Dark Gray",
 					"slug": "dark-gray"
@@ -161,7 +166,6 @@
 					"shadow": "0 4px 34px 0 rgba(0, 0, 0, 0.25)"
 				}
 			]
-
 		},
 		"useRootPaddingAwareAlignments": true
 	},

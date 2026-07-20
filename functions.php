@@ -1,9 +1,9 @@
 <?php 
 
 /** 
- * Enqueues the minified compiled stylesheet
+ * Enqueues the minified compiled stylesheet and javascript
  */
-function blackducktheme_enqueue_styles() {
+function blackducktheme_enqueue_assets() {
 
 	wp_enqueue_style(
 		'blackducktheme-style',
@@ -11,14 +11,23 @@ function blackducktheme_enqueue_styles() {
 		[],
 		wp_get_theme()->get( 'Version' )
 	);
+
+	wp_enqueue_script(
+		'blackducktheme-main',
+		get_template_directory_uri() . '/assets/js/main.js',
+		[],
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
 }
-add_action( 'wp_enqueue_scripts', 'blackducktheme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'blackducktheme_enqueue_assets' );
 
 
 /** 
  * Add custom pattern category for theme
  */
 function blackducktheme_custom_pattern_categories() {
+	
     register_block_pattern_category(
         'black-duck-custom',
         array( 
@@ -32,7 +41,7 @@ add_action( 'init', 'blackducktheme_custom_pattern_categories' );
 /** 
  * Load eBook data file once
  */
-require_once get_template_directory() . '/inc/ebook-data.php';
+require_once get_template_directory() . '/assets/data/ebook-data.php';
 
 
 /** 

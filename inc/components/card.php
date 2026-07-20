@@ -6,58 +6,45 @@
  * $card
  */
 
+// If expected card arg is empty, exit
 $card = $args['card'] ?? [];
 
 if ( empty( $card ) ) {
 	return;
 }
+
+// Variables
+$image       = get_template_directory_uri() . '/assets/images/' . (!empty($card['image']) ? $card['image'] : 'rubber-duckies-in-gutter.jpg');
+$categories  = !empty($card['categories']) ? $card['categories'] : [];
+$title       = !empty($card['title']) ? $card['title'] : '';
+$description = !empty($card['description']) ? $card['description'] : '';
+$link        = !empty($card['link']) ? $card['link'] : '';
+$tags  		 = !empty($card['tags']) ? $card['tags'] : [];
 ?>
 
 
-<article class="card">
+<article class="card" data-categories="<?php echo esc_attr( strtolower( implode( '; ', $categories ) ) ); ?>" data-tags="<?php echo esc_attr( strtolower( implode( '; ', $tags ) ) ); ?>">
 
 	<a class="card-link" href="<?php echo esc_url($card['link']); ?>" target="_blank" aria-label="Learn more about <?php echo esc_attr($card['title']); ?>">
 
 		<div class="card-content">
+			<div class="card-image">
+				<img src="<?php echo esc_url($image) ?>" alt="<?php echo esc_attr($card['title']); ?>">
+			</div>
 
-			<?php if (!empty($card['image'])): ?>
-
-				<div class="card-image">
-					<img src="<?php echo esc_url($card['image']); ?>" alt="<?php echo esc_attr($card['title']); ?>">
-				</div>
-
-			<?php endif; ?>
-
-			<?php if (!empty($card['categories'])): ?>
-
-				<span class="eyebrow">
-
-					<?php echo implode(', ', $card['categories']); ?>
-
-				</span>
-
-			<?php endif; ?>
+			<span class="eyebrow">
+				<?php echo implode(', ', $categories); ?>
+			</span>
 
 			<p class="headline">
-				<?php echo esc_html($card['title']); ?>
+				<?php echo esc_html($title); ?>
 			</p>
 
-
-			<?php if (!empty($card['description'])): ?>
-
-				<p class="description">
-					<?php echo esc_html($card['description']); ?>
-				</p>
-
-			<?php endif; ?>
-
+			<p class="description">
+				<?php echo esc_html($description); ?>
+			</p>
 		</div>
 
-		<?php if (!empty($card['link'])): ?>
-
-			<p class="call-to-action button button-tertiary button-icon">Learn More</p>
-
-		<?php endif; ?>
-
+		<p class="call-to-action button button-tertiary button-icon">Learn More</p>
 	</a>
 </article>
